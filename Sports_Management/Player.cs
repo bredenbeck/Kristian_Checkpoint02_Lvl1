@@ -20,5 +20,22 @@ public class Player
     {
         return $"#{Number}, {Name}";
     }
+
+    public bool Equals(Player other)
+    {
+        return (this.ToString() == other.ToString());
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is Player other)
+        {
+            return Equals(other);
+        }
+        else
+        {
+            return false;
+        }
+    }
     #endregion
 }

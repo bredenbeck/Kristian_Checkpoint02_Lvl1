@@ -18,5 +18,22 @@ public class Star : Player
     {
         return $"#{Number}, {Name} *** STAR PLAYER *** Description: {Description}";
     }
+
+    public bool Equals(Star other)
+    {
+        return (this.ToString() == other.ToString());
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is Star other)
+        {
+            return Equals(other);
+        }
+        else
+        {
+            return false;
+        }
+    }
     #endregion
 }

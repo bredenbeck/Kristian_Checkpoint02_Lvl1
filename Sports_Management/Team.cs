@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Sports_Management
 {
@@ -51,6 +52,24 @@ namespace Sports_Management
         {
             return Name;
         }
+
+        public bool Equals(Team other)
+        {
+            return (this.PrintTeam() == other.PrintTeam());
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is Team other)
+            {
+                return Equals(other);
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         #endregion
     }
 }
