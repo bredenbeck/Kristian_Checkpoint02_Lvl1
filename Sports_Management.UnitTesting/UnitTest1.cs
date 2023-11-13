@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Sports_Management.UnitTesting
 {
     public class Tests
@@ -18,15 +20,36 @@ namespace Sports_Management.UnitTesting
         }
 
         #region Team methods
+
         [Test]
-        public void PrintTeam_TeamWithPlayers_()
+        public void ToString_Team_StringWithTeamName()
         {
             // ASSIGN
+            string expected = "Team with players from start";
 
             // ACT
+            string actual = teamWithPlayersFromSetup.ToString();
 
             // ASSERT
-            Assert.Pass();
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void PrintTeam_TeamWithPlayers_StringWithTeamNameAndPlayers()
+        {
+            // ASSIGN
+            string expected = $"{teamWithPlayersFromSetup.Name}\n" +
+                $"------------------\n" +
+                $"{teamWithPlayersFromSetup.Players[0]}\n" +
+                $"{teamWithPlayersFromSetup.Players[1]}\n" +
+                $"{teamWithPlayersFromSetup.Players[2]}\n" +
+                $"{teamWithPlayersFromSetup.Players[3]}";
+
+            // ACT
+            string actual = teamWithPlayersFromSetup.PrintTeam();
+
+            // ASSERT
+            Assert.That(actual, Is.EqualTo(expected));
         }
 
         #endregion
