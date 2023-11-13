@@ -36,4 +36,17 @@ public class Star : Player
         }
     }
     #endregion
+
+    #region Operator overloads
+    public static bool operator ==(Star left, Star right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Star left, Star right)
+    {
+        return !left.Equals(right);
+    }
+
+    #endregion
 }

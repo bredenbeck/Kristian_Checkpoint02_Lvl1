@@ -38,4 +38,17 @@ public class Player
         }
     }
     #endregion
+
+    #region Operator overloads
+    public static bool operator ==(Player left, Player right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Player left, Player right)
+    {
+        return !left.Equals(right);
+    }
+
+    #endregion
 }

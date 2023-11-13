@@ -69,6 +69,18 @@ namespace Sports_Management
                 return false;
             }
         }
+        #endregion
+
+        #region Operator overloads
+        public static bool operator ==(Team left, Team right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(Team left, Team right)
+        {
+            return !left.Equals(right);
+        }
 
         #endregion
     }
