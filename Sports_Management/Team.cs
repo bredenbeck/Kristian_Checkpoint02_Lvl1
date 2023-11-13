@@ -21,6 +21,14 @@ namespace Sports_Management
         }
         #endregion
 
+        #region Methods
+
+        public void PrintTeam()
+        {
+
+        }
+        #endregion
+
         #region Methods: Override object class methods
         public override string ToString()
         {

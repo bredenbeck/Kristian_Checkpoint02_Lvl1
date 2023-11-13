@@ -18,7 +18,7 @@ public class Player
     #region Methods: Override object class methods
     public override string ToString()
     {
-        return $"{Name}, #{Number}";
+        return $"#{Number}, {Name}";
     }
     #endregion
 }

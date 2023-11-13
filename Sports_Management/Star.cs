@@ -16,7 +16,7 @@ public class Star : Player
     #region Methods: Override object class methods
     public override string ToString()
     {
-        return $"{Name}, #{Number}. Star player: {Description}";
+        return $"#{Number}, {Name} *** STAR PLAYER *** Description: {Description}";
     }
     #endregion
 }
