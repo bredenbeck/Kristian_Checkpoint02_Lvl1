@@ -70,5 +70,22 @@ namespace Sports_Management.UnitTesting
             Assert.That(actual, Is.EqualTo(expected));
         }
         #endregion
+        
+        #region Star methods
+        [TestCase("August", 5, "The Good", "#5, August *** STAR PLAYER *** Description: The Good")]
+        [TestCase("Nils", 7, "The Bad", "#7, Nils *** STAR PLAYER *** Description: The Bad")]
+        [TestCase("Karianne", 2, "The Weird", "#2, Karianne *** STAR PLAYER *** Description: The Weird")]
+        public void ToString_NameAndNumber_StringWithNameAndNumber(string name, int number, string description, string expected)
+        {
+            // ASSIGN
+            Player player = new Star(name, number, description);
+
+            // ACT
+            string actual = player.ToString();
+
+            // ASSERT
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        #endregion
     }
 }

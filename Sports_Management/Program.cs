@@ -1,5 +1,7 @@
 ﻿namespace Sports_Management
 {
+    // GITHUB: https://github.com/bredenbeck/Kristian_Checkpoint02_Lvl1
+
     internal class Program
     {
         static void Main(string[] args)
