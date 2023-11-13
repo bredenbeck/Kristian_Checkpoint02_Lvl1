@@ -32,15 +32,17 @@ namespace Sports_Management
             Players.Add(new Star(name, number, description));
         }
 
-        public void PrintTeam()
+        public string PrintTeam()
         {
-            Console.WriteLine(this);
-            Console.WriteLine("------------------");
+            string team = Name + "\n------------------";
 
             foreach (Player player in Players)
             {
-                Console.WriteLine(player);
+                team += $"\n{player}";
             }
+
+            Console.WriteLine(team);
+            return team;
         }
         #endregion
 
