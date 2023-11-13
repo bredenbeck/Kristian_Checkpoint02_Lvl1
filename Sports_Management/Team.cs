@@ -20,5 +20,12 @@ namespace Sports_Management
             Players = new List<Player>();
         }
         #endregion
+
+        #region Methods: Override object class methods
+        public override string ToString()
+        {
+            return Name;
+        }
+        #endregion
     }
 }

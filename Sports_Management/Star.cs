@@ -7,9 +7,16 @@ public class Star : Player
     #endregion
     
     #region
-    public Star(string name, int number, string description) : base(name, number) 
+    public Star(string name, int number, string description = "No description provided for this player.") : base(name, number) 
     {
         Description = description;
+    }
+    #endregion
+
+    #region Methods: Override object class methods
+    public override string ToString()
+    {
+        return $"{Name}, #{Number}. Star player: {Description}";
     }
     #endregion
 }

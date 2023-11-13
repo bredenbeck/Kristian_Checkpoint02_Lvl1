@@ -14,4 +14,11 @@ public class Player
         Number = number;
     }
     #endregion
+
+    #region Methods: Override object class methods
+    public override string ToString()
+    {
+        return $"{Name}, #{Number}";
+    }
+    #endregion
 }
